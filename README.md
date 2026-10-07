@@ -331,19 +331,17 @@ Live Web Application
 
 ### 📊 Tableau Dashboard
 
-[Open Dashboard](https://public.tableau.com/app/profile/rutuja.shinde1007/viz/tableau_17913568343860/Dashboard2?publish=yes)
+[Open Tableau Public Dashboard](https://public.tableau.com/app/profile/rutuja.shinde1007/viz/tableau_17913568343860/Dashboard2?publish=yes)
 
 ### 📖 Tableau Story
 
-[Open Story](https://public.tableau.com/app/profile/rutuja.shinde1007/viz/STORY_17912681662470/Story1)
+[Open Tableau Public Story](https://public.tableau.com/app/profile/rutuja.shinde1007/viz/STORY_17912681662470/Story1)
 
 ### 🌐 Live Demo
 
-**Add your Vercel deployment URL here after deployment.**
+[Open Live Website](https://indias-agricultural-crop-production.vercel.app/)
 
-```text
-https://your-project-name.vercel.app
-```
+The Flask application is deployed on Vercel and provides access to the interactive agricultural analytics experience.
 
 ---
 
