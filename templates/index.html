@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b100d">
+    <meta name="description" content="India's Agricultural Crop Production Analysis, presented through Tableau dashboards and Flask web integration.">
+    <title>India's Agricultural Crop Production Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+        <nav class="navbar shell" aria-label="Main navigation">
+            <a class="brand" href="#home" aria-label="Agricultural Crop Production Analysis home">
+                <span class="brand-mark" aria-hidden="true">
+                    <svg viewBox="0 0 32 32"><path d="M16 25V13"/><path d="M16 17C8 17 7 11 7 7c5 0 11 2 9 10Z"/><path d="M16 20c0-6 4-9 10-9 0 6-3 10-10 10"/></svg>
+                </span>
+                <span class="brand-name">CROP<span>INSIGHTS</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a class="nav-embed-link" href="#dashboard">Dashboard</a>
+                <a class="nav-embed-link" href="#story">Story</a>
+                <a href="#insights">Insights</a>
+                <a href="#technology">Technology</a>
+            </div>
+            <a class="nav-cta" href="#dashboard">Explore project <span aria-hidden="true">↗</span></a>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="hero shell" id="home">
+            <div class="hero-copy">
+                <p class="eyebrow"><span class="status-dot"></span> AGRICULTURE <i>·</i> DATA <i>·</i> DISCOVERY</p>
+                <h1>India's Agricultural <span>Crop Production</span> Analysis</h1>
+                <p class="hero-subtitle">Exploring India's crop production data through interactive Tableau dashboards and stories.</p>
+                <p class="hero-description">Examine agricultural production across India to explore crop patterns, regional differences and production trends through data visualization.</p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#dashboard">Explore Dashboard <span aria-hidden="true">↘</span></a>
+                    <a class="button button-quiet" href="#story">View Story <span aria-hidden="true">→</span></a>
+                </div>
+                <div class="hero-note"><span class="note-rule"></span><span>Interactive Tableau views, integrated into a Flask web experience.</span></div>
+            </div>
+
+            <div class="hero-visual" role="img" aria-label="Illustration of Indian agricultural fields and a crop production chart">
+                <div class="visual-glow"></div>
+                <div class="field-art">
+                    <div class="sun-disc"></div>
+                    <div class="field-hill hill-back"></div>
+                    <div class="field-hill hill-front"></div>
+                    <div class="field-row row-one"></div>
+                    <div class="field-row row-two"></div>
+                    <div class="field-row row-three"></div>
+                    <div class="field-row row-four"></div>
+                    <span class="field-label">INDIA · AGRICULTURAL LANDSCAPE</span>
+                </div>
+                <div class="production-card glass-card">
+                    <div class="production-card-head">
+                        <div><span class="mini-label">DATA EXPLORER</span><h2>Production patterns</h2></div>
+                        <span class="chart-mark" aria-hidden="true">↗</span>
+                    </div>
+                    <div class="production-chart" aria-hidden="true">
+                        <div class="chart-y-labels"><span>High</span><span>Mid</span><span>Low</span></div>
+                        <div class="chart-columns">
+                            <span style="--bar: 43%"></span><span style="--bar: 64%"></span>
+                            <span style="--bar: 52%"></span><span style="--bar: 82%"></span>
+                            <span style="--bar: 59%"></span><span style="--bar: 94%"></span>
+                            <span style="--bar: 72%"></span>
+                        </div>
+                    </div>
+                    <div class="chart-x-labels"><span>Crop</span><span>Region</span><span>Year</span><span>Compare</span></div>
+                    <p class="illustration-note">Illustrative graphic · not project findings</p>
+                </div>
+                <div class="floating-chip chip-crop glass-card"><span class="chip-symbol" aria-hidden="true">✳</span><span><b>Crop patterns</b><small>Explore the data</small></span></div>
+                <div class="floating-chip chip-region glass-card"><span class="chip-symbol chip-symbol-alt" aria-hidden="true">⌖</span><span><b>Regional view</b><small>Across India</small></span></div>
+                <span class="visual-index">01 <i>/ 06</i></span>
+            </div>
+            <div class="hero-footerline"><span>INDIA'S AGRICULTURAL CROP PRODUCTION ANALYSIS</span><span>TABLEAU <i>·</i> FLASK <i>·</i> PYTHON</span></div>
+        </section>
+
+        <section class="embed-shortcuts shell" aria-label="Jump to Tableau views">
+            <a class="embed-shortcut dashboard-shortcut" href="#dashboard">
+                <span class="shortcut-icon" aria-hidden="true">▦</span>
+                <span class="shortcut-copy"><span class="shortcut-label">INTERACTIVE VIEW</span><strong>Open Tableau Dashboard</strong><small>Explore the crop production dashboard</small></span>
+                <span class="shortcut-arrow" aria-hidden="true">↘</span>
+            </a>
+            <a class="embed-shortcut story-shortcut" href="#story">
+                <span class="shortcut-icon" aria-hidden="true">◈</span>
+                <span class="shortcut-copy"><span class="shortcut-label">GUIDED EXPLORATION</span><strong>Open Tableau Story</strong><small>Follow the agricultural analysis</small></span>
+                <span class="shortcut-arrow" aria-hidden="true">↘</span>
+            </a>
+        </section>
+
+        <section class="section shell" id="about">
+            <div class="section-heading">
+                <p class="eyebrow">PROJECT OVERVIEW <span class="heading-rule"></span></p>
+                <h2>Make production data <span>easier to explore.</span></h2>
+                <p>This project analyses India's agricultural crop production data to identify production trends, crop patterns, regional differences and important agricultural insights.</p>
+            </div>
+            <div class="overview-grid">
+                <article class="overview-card glass-card">
+                    <span class="card-index">01 / EXPLORE</span>
+                    <span class="overview-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h16"/><path d="m7 15 4-4 3 2 5-6"/></svg>
+                    </span>
+                    <h3>Data Analysis</h3>
+                    <p>Study crop production data to understand trends, compare crops and examine regional differences.</p>
+                    <span class="card-corner" aria-hidden="true">↗</span>
+                </article>
+                <article class="overview-card glass-card">
+                    <span class="card-index">02 / VISUALIZE</span>
+                    <span class="overview-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 15v-3m4 3V8m4 7v-5"/></svg>
+                    </span>
+                    <h3>Tableau Visualization</h3>
+                    <p>Present agricultural information in interactive Tableau dashboards and a guided data story.</p>
+                    <span class="card-corner" aria-hidden="true">↗</span>
+                </article>
+                <article class="overview-card glass-card">
+                    <span class="card-index">03 / INTEGRATE</span>
+                    <span class="overview-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><path d="M8 8H5a2 2 0 0 0-2 2v9h13v-3"/><path d="M10 3h11v11H10z"/><path d="m14 10 2 2 4-4"/></svg>
+                    </span>
+                    <h3>Interactive Web Integration</h3>
+                    <p>Bring the dashboard and story together in an accessible, responsive Flask website.</p>
+                    <span class="card-corner" aria-hidden="true">↗</span>
+                </article>
+            </div>
+        </section>
+
+        <section class="process-section">
+            <div class="shell">
+                <div class="section-heading">
+                    <p class="eyebrow">FROM SOURCE TO STORY <span class="heading-rule"></span></p>
+                    <h2>A clear path from <span>data to discovery.</span></h2>
+                    <p>Each step prepares the agricultural data for an interactive, browser-based experience.</p>
+                </div>
+                <div class="process-flow" aria-label="Data collection, preparation, visualization, dashboard, story, and Flask web integration">
+                    <article class="process-step"><span class="step-number">01</span><span class="step-icon" aria-hidden="true">⌁</span><h3>Data Collection</h3><p>Gather agricultural production data.</p></article>
+                    <span class="process-arrow" aria-hidden="true">→</span>
+                    <article class="process-step"><span class="step-number">02</span><span class="step-icon" aria-hidden="true">⌕</span><h3>Data Preparation</h3><p>Prepare fields for consistent analysis.</p></article>
+                    <span class="process-arrow" aria-hidden="true">→</span>
+                    <article class="process-step"><span class="step-number">03</span><span class="step-icon" aria-hidden="true">▥</span><h3>Visualization</h3><p>Choose useful views of the data.</p></article>
+                    <span class="process-arrow" aria-hidden="true">→</span>
+                    <article class="process-step"><span class="step-number">04</span><span class="step-icon" aria-hidden="true">▦</span><h3>Dashboard</h3><p>Enable interactive data exploration.</p></article>
+                    <span class="process-arrow" aria-hidden="true">→</span>
+                    <article class="process-step"><span class="step-number">05</span><span class="step-icon" aria-hidden="true">◈</span><h3>Story</h3><p>Guide viewers through the analysis.</p></article>
+                    <span class="process-arrow" aria-hidden="true">→</span>
+                    <article class="process-step"><span class="step-number">06</span><span class="step-icon" aria-hidden="true">⌘</span><h3>Flask Integration</h3><p>Present Tableau views on the web.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section shell technology-section" id="technology">
+            <div class="section-heading">
+                <p class="eyebrow">TECHNOLOGY STACK <span class="heading-rule"></span></p>
+                <h2>Tools that bring the <span>analysis together.</span></h2>
+            </div>
+            <div class="technology-grid">
+                <article class="technology-card"><span class="technology-mark" aria-hidden="true">Py</span><div><h3>Python</h3><p>Supports data preparation and application logic.</p></div></article>
+                <article class="technology-card"><span class="technology-mark flask-mark" aria-hidden="true">f</span><div><h3>Flask</h3><p>Serves the website and its static styles.</p></div></article>
+                <article class="technology-card"><span class="technology-mark tableau-mark" aria-hidden="true">▦</span><div><h3>Tableau</h3><p>Powers interactive dashboards and stories.</p></div></article>
+                <article class="technology-card"><span class="technology-mark html-mark" aria-hidden="true">&lt;/&gt;</span><div><h3>HTML</h3><p>Structures the project page and embeds.</p></div></article>
+                <article class="technology-card"><span class="technology-mark css-mark" aria-hidden="true">#</span><div><h3>CSS</h3><p>Creates the responsive visual experience.</p></div></article>
+            </div>
+        </section>
+
+        <section class="embed-section" id="dashboard">
+            <div class="shell embed-shell">
+                <div class="section-heading section-heading-center">
+                    <p class="eyebrow">EXPLORE THE DATA <span class="heading-rule"></span></p>
+                    <h2>Interactive Tableau <span>Dashboard</span></h2>
+                    <p>Use the embedded dashboard to explore the agricultural production analysis.</p>
+                </div>
+                <div class="embed-window">
+                    <div class="embed-toolbar"><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>AGRICULTURAL CROP PRODUCTION / DASHBOARD</span><span class="embed-status"><i></i> TABLEAU VIEW</span></div>
+                    <div class="tableau-frame dashboard-frame">
+                        <iframe src="https://public.tableau.com/views/Dashboard_17912680080530/Dashboard2?:showVizHome=no&amp;:embed=true" title="Interactive Tableau dashboard for India's Agricultural Crop Production Analysis" loading="lazy" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="story-actions">
+                    <p class="embed-caption"><span class="status-dot"></span> Tableau Public dashboard embedded above.</p>
+                    <a class="story-open-link" href="https://public.tableau.com/app/profile/rutuja.shinde1007/viz/Dashboard_17912680080530/Dashboard2" target="_blank" rel="noopener noreferrer">Open Tableau Dashboard <span aria-hidden="true">↗</span></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="embed-section story-section" id="story">
+            <div class="shell embed-shell">
+                <div class="section-heading section-heading-center">
+                    <p class="eyebrow">FOLLOW THE ANALYSIS <span class="heading-rule"></span></p>
+                    <h2>Tableau <span>Story</span></h2>
+                    <p>Follow a guided narrative through the crop production data and its visual analysis.</p>
+                </div>
+                <div class="embed-window">
+                    <div class="embed-toolbar"><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>AGRICULTURAL CROP PRODUCTION / STORY</span><span class="embed-status"><i></i> TABLEAU STORY</span></div>
+                    <div class="tableau-frame story-frame">
+                        <iframe src="https://public.tableau.com/views/STORY_17912681662470/Story1?:showVizHome=no&amp;:embed=true" title="Tableau story for India's Agricultural Crop Production Analysis" loading="lazy" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="story-actions">
+                    <p class="embed-caption"><span class="status-dot"></span> Tableau Public story embedded above.</p>
+                    <a class="story-open-link" href="https://public.tableau.com/app/profile/rutuja.shinde1007/viz/STORY_17912681662470/Story1" target="_blank" rel="noopener noreferrer">Open Tableau Story <span aria-hidden="true">↗</span></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section shell insights-section" id="insights">
+            <div class="section-heading">
+                <p class="eyebrow">AREAS TO INVESTIGATE <span class="heading-rule"></span></p>
+                <h2>Questions that can reveal <span>agricultural patterns.</span></h2>
+                <p>These are analysis themes, not numerical findings. Use your Tableau views to discover what the data shows.</p>
+            </div>
+            <div class="insights-grid">
+                <article class="insight-card"><span class="insight-number">01</span><span class="insight-label">OVER TIME</span><h3>Crop Production Trends</h3><p>Explore how production patterns change across the years available in the dataset.</p><span class="insight-arrow" aria-hidden="true">↗</span></article>
+                <article class="insight-card"><span class="insight-number">02</span><span class="insight-label">ACROSS INDIA</span><h3>Regional Production Patterns</h3><p>Compare production across states or regions represented in the source data.</p><span class="insight-arrow" aria-hidden="true">↗</span></article>
+                <article class="insight-card"><span class="insight-number">03</span><span class="insight-label">BY CROP</span><h3>Crop-wise Comparison</h3><p>Review how production differs among crop types included in the analysis.</p><span class="insight-arrow" aria-hidden="true">↗</span></article>
+                <article class="insight-card"><span class="insight-number">04</span><span class="insight-label">GROWTH</span><h3>Agricultural Growth Patterns</h3><p>Investigate potential growth or decline patterns without assuming a result in advance.</p><span class="insight-arrow" aria-hidden="true">↗</span></article>
+            </div>
+        </section>
+
+        <section class="progress-section">
+            <div class="shell">
+                <div class="section-heading">
+                    <p class="eyebrow">PROJECT WORKFLOW <span class="heading-rule"></span></p>
+                    <h2>Progress at a <span>glance.</span></h2>
+                    <p>Project-progress indicators only; update the percentages as your work advances.</p>
+                </div>
+                <div class="progress-grid">
+                    <article class="progress-card"><div class="progress-top"><h3>Data Collection &amp; Extraction</h3><strong>50%</strong></div><div class="progress-track"><span style="--progress: 50%"></span></div><span class="progress-state">IN PROGRESS</span></article>
+                    <article class="progress-card"><div class="progress-top"><h3>Data Preparation</h3><strong>50%</strong></div><div class="progress-track"><span style="--progress: 50%"></span></div><span class="progress-state">IN PROGRESS</span></article>
+                    <article class="progress-card"><div class="progress-top"><h3>Data Visualization</h3><strong>50%</strong></div><div class="progress-track"><span style="--progress: 50%"></span></div><span class="progress-state">IN PROGRESS</span></article>
+                    <article class="progress-card"><div class="progress-top"><h3>Dashboard</h3><strong>50%</strong></div><div class="progress-track"><span style="--progress: 50%"></span></div><span class="progress-state">IN PROGRESS</span></article>
+                    <article class="progress-card"><div class="progress-top"><h3>Story</h3><strong>50%</strong></div><div class="progress-track"><span style="--progress: 50%"></span></div><span class="progress-state">IN PROGRESS</span></article>
+                    <article class="progress-card progress-card-current"><div class="progress-top"><h3>Web Integration</h3><strong>25%</strong></div><div class="progress-track"><span style="--progress: 25%"></span></div><span class="progress-state">IN PROGRESS</span></article>
+                    <article class="progress-card"><div class="progress-top"><h3>Performance Testing</h3><strong>50%</strong></div><div class="progress-track"><span style="--progress: 50%"></span></div><span class="progress-state">IN PROGRESS</span></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="integration-section" id="integration">
+            <div class="shell integration-layout">
+                <div class="integration-copy">
+                    <p class="eyebrow">WEB INTEGRATION <span class="heading-rule"></span></p>
+                    <h2>Tableau analytics, <span>ready for the browser.</span></h2>
+                    <p>Flask serves this web interface and its static stylesheet, while separate embedded Tableau views make the dashboard and story accessible in one place.</p>
+                    <a class="button button-primary" href="#dashboard">Open dashboard section <span aria-hidden="true">↗</span></a>
+                </div>
+                <div class="benefits-grid">
+                    <article class="benefit-card"><span>01</span><div><h3>Easy browser access</h3><p>Open the project through a web browser.</p></div></article>
+                    <article class="benefit-card"><span>02</span><div><h3>Interactive visualization</h3><p>Explore Tableau views directly on the page.</p></div></article>
+                    <article class="benefit-card"><span>03</span><div><h3>Centralized presentation</h3><p>Keep the dashboard and story together.</p></div></article>
+                    <article class="benefit-card"><span>04</span><div><h3>Shareable analytics</h3><p>Share one web address for the project.</p></div></article>
+                    <article class="benefit-card"><span>05</span><div><h3>Accessible insights</h3><p>Make analysis easier to navigate and revisit.</p></div></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="conclusion-section shell">
+            <div class="conclusion-panel">
+                <div class="conclusion-decoration" aria-hidden="true"></div>
+                <div class="conclusion-copy">
+                    <p class="eyebrow">CONCLUSION</p>
+                    <h2>Bringing agricultural data <span>into focus.</span></h2>
+                    <p>Tableau visualization combined with Flask web integration makes India's agricultural crop production data easier to explore and understand. Together, the dashboard and story provide an interactive way to examine patterns and communicate the analysis.</p>
+                </div>
+                <a class="button button-primary" href="#home">Back to top <span aria-hidden="true">↑</span></a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="shell footer-main">
+            <a class="brand" href="#home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 25V13"/><path d="M16 17C8 17 7 11 7 7c5 0 11 2 9 10Z"/><path d="M16 20c0-6 4-9 10-9 0 6-3 10-10 10"/></svg></span><span class="brand-name">CROP<span>INSIGHTS</span></span></a>
+            <p>India's Agricultural Crop Production Analysis</p>
+            <nav class="footer-links" aria-label="Footer navigation"><a href="#about">About</a><a href="#dashboard">Dashboard</a><a href="#story">Story</a><a href="#insights">Insights</a><a href="#technology">Technology</a></nav>
+        </div>
+        <div class="shell footer-bottom"><span>TABLEAU + FLASK WEB INTEGRATION</span><a href="#home">BACK TO TOP ↑</a></div>
+    </footer>
+</body>
+</html>
